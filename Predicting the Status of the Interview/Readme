@@ -1,142 +1,93 @@
-📄 Predicting Interview Status (Machine Learning)
+# Predicting Interview Status (Machine Learning)
 
-A machine learning project to predict interview outcomes — Selected / Consider / Rejected — using structured interview evaluation metrics.
+A machine learning project to predict interview outcomes (Selected / Consider / Rejected) using interview evaluation metrics.
 
-🎯 Objective
+## Objective
+To predict the final interview status using structured evaluation scores.
 
-Predict interview results using the following evaluation parameters:
+Key features used:
+- Logical reasoning
+- Attitude evaluation
+- Personality evaluation
+- Communication score
+- Interview duration
+- Confidence and interaction
+- Compliance ratio
 
-Key Features
+## Dataset
+Files:
+- train.csv (training data)
+- test.csv (testing data)
 
-Logical reasoning scores
+Target column:
+- Status
 
-Attitude evaluation
+Total columns: 27 (numeric + categorical)
 
-Personality evaluation
-
-Communication score
-
-Interview duration
-
-Confidence & interaction
-
-Compliance ratio
-
-Goal
-
-Support HR with data-driven hiring, reduce subjective judgment, and understand which factors impact selection.
-
-📂 Dataset
-
-Files included:
-
-train.csv → Used to train the model
-
-test.csv → Used to generate predictions
-
-Target Column
-
-Status
-
-Data Type
-
-27 features (numeric + categorical)
-
-🧠 Model Used
-
+## Model
 Algorithm:
+- Random Forest Classifier
 
-Random Forest Classifier
+Model settings:
+- n_estimators = 200
+- class_weight = balanced
 
-Settings:
+Evaluation metrics:
+- Accuracy score (80%+)
+- Confusion matrix
+- Classification report
+- Feature importance plot
 
-200 trees
+## Workflow
+- Load dataset
+- Remove ID columns
+- Label encoding for categorical variables
+- Train-test split
+- Train Random Forest model
+- Evaluate performance
+- Plot feature importance
 
-Balanced class weights
+## Tech Stack
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
-Evaluation:
-
-Accuracy: 80%+
-
-Confusion Matrix
-
-Classification Report
-
-Feature Importance
-
-🔄 Workflow
-
-Data Loading
-
-Cleaning (drop IDs)
-
-Label Encoding
-
-Train/Test Split
-
-Model Training
-
-Evaluation & Metrics
-
-Feature Importance Graph
-
-🛠 Tech Stack
-
-Python
-
-Jupyter Notebook
-
-Pandas, NumPy
-
-Scikit-Learn
-
-Matplotlib, Seaborn
-
-▶️ How to Run
-
-Install Packages
-
+## How to Run
+Install dependencies:
 pip install -r requirements.txt
 
-
-Run Notebook
-
+Run notebook:
 jupyter notebook
+Open the file: Predicting the Status of the Interview.ipynb
 
-
-Open:
-
-Predicting the Status of the Interview.ipynb
-
-Or Run Python Script
-
+Or run Python script:
 python interview_predict.py
 
-📁 Project Structure
-📦 Interview-Status-Prediction
-│-- Predicting the Status of the Interview.ipynb
-│-- interview_predict.py
-│-- train.csv
-│-- test.csv
-│-- poster.png
-└-- README.md
+## Project Structure
+Predicting-Interview-Status/
+|-- Predicting the Status of the Interview.ipynb
+|-- interview_predict.py
+|-- train.csv
+|-- test.csv
+|-- poster.png
+|-- README.md
 
-🔍 Key Insights
+## Key Insights
+- Logical reasoning and personality have the highest influence.
+- Communication and attitude also impact selection decisions.
+- Duration and engagement have moderate influence.
 
-Logical & reasoning scores strongly influence selection
+## Future Work
+- Hyperparameter tuning
+- Try XGBoost and LightGBM
+- Add SHAP for model explanation
+- Deploy using Streamlit
 
-Personality & attitude evaluation have major impact
-
-Communication plays an important role
-
-Duration & engagement moderately contribute
-
-🚀 Future Enhancements
-
-Hyperparameter tuning (GridSearchCV)
-
-Compare with XGBoost / LightGBM
-
-Add SHAP for interpretability
-
-Streamlit UI for live prediction
+## Author
+Chaitanya Srivastava
+GitHub: https://github.com/CHAITAN42
+LinkedIn: https://linkedin.com/in/ChaitanyaSrivastava006
