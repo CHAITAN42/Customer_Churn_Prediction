@@ -1,0 +1,142 @@
+📄 Predicting Interview Status (Machine Learning)
+
+A machine learning project to predict interview outcomes — Selected / Consider / Rejected — using structured interview evaluation metrics.
+
+🎯 Objective
+
+Predict interview results using the following evaluation parameters:
+
+Key Features
+
+Logical reasoning scores
+
+Attitude evaluation
+
+Personality evaluation
+
+Communication score
+
+Interview duration
+
+Confidence & interaction
+
+Compliance ratio
+
+Goal
+
+Support HR with data-driven hiring, reduce subjective judgment, and understand which factors impact selection.
+
+📂 Dataset
+
+Files included:
+
+train.csv → Used to train the model
+
+test.csv → Used to generate predictions
+
+Target Column
+
+Status
+
+Data Type
+
+27 features (numeric + categorical)
+
+🧠 Model Used
+
+Algorithm:
+
+Random Forest Classifier
+
+Settings:
+
+200 trees
+
+Balanced class weights
+
+Evaluation:
+
+Accuracy: 80%+
+
+Confusion Matrix
+
+Classification Report
+
+Feature Importance
+
+🔄 Workflow
+
+Data Loading
+
+Cleaning (drop IDs)
+
+Label Encoding
+
+Train/Test Split
+
+Model Training
+
+Evaluation & Metrics
+
+Feature Importance Graph
+
+🛠 Tech Stack
+
+Python
+
+Jupyter Notebook
+
+Pandas, NumPy
+
+Scikit-Learn
+
+Matplotlib, Seaborn
+
+▶️ How to Run
+
+Install Packages
+
+pip install -r requirements.txt
+
+
+Run Notebook
+
+jupyter notebook
+
+
+Open:
+
+Predicting the Status of the Interview.ipynb
+
+Or Run Python Script
+
+python interview_predict.py
+
+📁 Project Structure
+📦 Interview-Status-Prediction
+│-- Predicting the Status of the Interview.ipynb
+│-- interview_predict.py
+│-- train.csv
+│-- test.csv
+│-- poster.png
+└-- README.md
+
+🔍 Key Insights
+
+Logical & reasoning scores strongly influence selection
+
+Personality & attitude evaluation have major impact
+
+Communication plays an important role
+
+Duration & engagement moderately contribute
+
+🚀 Future Enhancements
+
+Hyperparameter tuning (GridSearchCV)
+
+Compare with XGBoost / LightGBM
+
+Add SHAP for interpretability
+
+Streamlit UI for live prediction
